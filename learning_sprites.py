@@ -9,6 +9,7 @@ class Crosshair(pygame.sprite.Sprite):
         self.image = pygame.transform.scale(self.image, (self.image.get_width()/2, self.image.get_height()/2))
         self.rect = self.image.get_rect()
         self.gunshot = pygame.mixer.Sound("shooting.wav")
+        
     def shoot(self):
         self.gunshot.play()
         pygame.sprite.spritecollide(crosshair, target_group, True)
